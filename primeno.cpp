@@ -3,25 +3,21 @@
 
 using namespace std;
 
-/**
- * @brief Checks if a given integer is a prime number using the basic trial division method up to the square root of the number.
- * @param n The integer to check.
- * @return true if n is prime, false otherwise.
- */
+
 bool isPrime(int n) {
-    // Numbers less than or equal to 1 are not prime.
+   
     if (n <= 1) {
         return false;
     }
 
-    // Check for divisors starting from 2 up to the square root of n.
+   
     for (int i = 2; i * i <= n; ++i) {
         if (n % i == 0) {
-            return false; // Found a divisor, so it's not prime.
+            return false; 
         }
     }
 
-    return true; // No divisors found, so it is prime.
+    return true; 
 }
 
 int main() {
